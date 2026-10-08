@@ -1,1 +1,110 @@
 <!-- App teste -->
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bite_email_automation_tests — Recolha automática de faturas</title>
+  <meta name="description" content="Ferramenta interna que identifica faturas recebidas no Gmail e guarda-as numa pasta.">
+  <style>
+    :root {
+      --papel: #F7F9FA;
+      --tinta: #1C2730;
+      --suave: #5B6873;
+      --linha: #D5DDE3;
+      --acento: #1D5F6B;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--papel);
+      color: var(--tinta);
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      font-size: 1.0625rem;
+      line-height: 1.6;
+    }
+    main {
+      max-width: 40rem;
+      margin: 0 auto;
+      padding: 4.5rem 1.5rem 3rem;
+    }
+    h1 {
+      font-size: clamp(1.75rem, 4vw, 2.25rem);
+      line-height: 1.2;
+      margin: 0 0 1rem;
+      font-weight: 650;
+      word-break: break-word;
+    }
+    .resumo {
+      font-size: 1.25rem;
+      color: var(--suave);
+      margin: 0 0 2.5rem;
+    }
+    .fluxo {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 0.5rem 0.75rem;
+      padding: 1.25rem 0;
+      margin: 0 0 2.5rem;
+      border-top: 1px solid var(--linha);
+      border-bottom: 1px solid var(--linha);
+      color: var(--acento);
+      font-weight: 600;
+    }
+    .fluxo span + span::before {
+      content: "";
+      display: inline-block;
+      width: 1.5rem;
+      height: 1px;
+      background: var(--acento);
+      vertical-align: middle;
+      margin-right: 0.75rem;
+    }
+    h2 {
+      font-size: 1.125rem;
+      margin: 2rem 0 0.5rem;
+    }
+    p, ul { margin: 0 0 1rem; }
+    ul { padding-left: 1.25rem; }
+    a { color: var(--acento); }
+    a:focus-visible { outline: 2px solid var(--acento); outline-offset: 2px; }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1.25rem;
+      border-top: 1px solid var(--linha);
+      color: var(--suave);
+      font-size: 0.9375rem;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Bite_email_automation_tests</h1>
+    <p class="resumo">Ferramenta interna que encontra as faturas recebidas no Gmail e guarda-as, organizadas por mês, numa pasta de arquivo.</p>
+
+    <div class="fluxo" aria-label="Como funciona">
+      <span>Gmail</span><span>Identificação de faturas</span><span>Pasta de arquivo</span>
+    </div>
+
+    <h2>O que faz</h2>
+    <ul>
+      <li>Procura emails com anexos PDF ou XML na conta Gmail autorizada.</li>
+      <li>Verifica se cada anexo é uma fatura, recibo ou nota de crédito.</li>
+      <li>Guarda as faturas numa pasta, com o nome do fornecedor, o número e a data.</li>
+      <li>Aplica uma etiqueta aos emails já verificados, para não os processar duas vezes.</li>
+    </ul>
+
+    <h2>Acesso aos dados</h2>
+    <p>A aplicação só acede à conta Gmail de quem a autoriza e usa esse acesso exclusivamente para identificar e guardar faturas. Não envia emails, não apaga mensagens e não partilha dados para fins comerciais.</p>
+    <p>Os detalhes estão na <a href="privacidade.html">política de privacidade</a>.</p>
+
+    <h2>Contacto</h2>
+    <p>Para questões sobre esta aplicação: <a href="mailto:testescatia@gmail.com">testescatia@gmail.com</a></p>
+
+    <footer>
+      <a href="privacidade.html">Política de privacidade</a>
+    </footer>
+  </main>
+</body>
+</html>
